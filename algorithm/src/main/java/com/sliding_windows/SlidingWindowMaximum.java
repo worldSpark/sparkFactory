@@ -4,6 +4,36 @@ import java.util.ArrayDeque;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
+/**
+ * 给定一个数组 nums，有一个大小为k的滑动窗口从数组的最左侧移动到数组的最右侧。你只可以看到在滑动窗口内的 k个数字。滑动窗口每次只向右移动一位。
+ * 输入: nums = [1,3,-1,-3,5,3,6,7], 和 k = 3
+ * 输出: [3,3,5,5,6,7]
+ * 解释:
+ *
+ *   滑动窗口的位置                最大值
+ * ---------------               -----
+ * [1  3  -1] -3  5  3  6  7       3
+ *  1 [3  -1  -3] 5  3  6  7       3
+ *  1  3 [-1  -3  5] 3  6  7       5
+ *  1  3  -1 [-3  5  3] 6  7       5
+ *  1  3  -1  -3 [5  3  6] 7       6
+ *  1  3  -1  -3  5 [3  6  7]      7
+ *
+ *
+ *  输入：nums = [1], k = 1
+ * 输出：[1]
+ *
+ *
+ * 输入：nums = [9,11], k = 2
+ * 输出：[11]
+ *
+ *
+ * 1 <= nums.length <= 10^5
+ * -10^4<= nums[i]<= 10^4
+ * 1 <= k<= nums.length
+ *
+ *
+ */
 public class SlidingWindowMaximum {
     // 方法一：暴力法，遍历每一个窗口，对每个窗口遍历每个元素求最大值
     public int[] maxSlidingWindow1(int[] nums, int k){

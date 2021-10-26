@@ -1,7 +1,19 @@
 package com.linked_list;
 
+/**
+ * 输入: 1->2->3->4->5->NULL
+ * 输出: 5->4->3->2->1->NULL
+ *
+ */
 public class ReverseLinkedList {
     // 方法一：迭代
+
+    /**
+     * 假设存在链表 1→2→3→null，我们想要把它改成null←1←2←3。
+     * 我们只需要依次迭代节点遍历链表，在迭代过程中，将当前节点的 next 指针改为指向前一个元素就可以了。
+     * @param head
+     * @return
+     */
     public ListNode reverseList1(ListNode head){
         // 定义两个指针，指向当前访问的节点，以及上一个节点
         ListNode curr = head;
@@ -22,6 +34,17 @@ public class ReverseLinkedList {
     }
 
     // 方法二：递归
+
+    /**
+     * 假设链表为（长度为m）：
+     * n1 → n2 → …→nk−1 →nk →nk+1 →…→nm → null
+     * 若我们遍历到了nk，那么认为剩余节点nk+1到nm 已经被反转。
+     * n1 → n2 → …→nk−1 →nk → nk+1 ←…← nm ​
+     * 我们现在希望 nk+1 的下一个节点指向 nk，所以，应该有
+     * nk+1.next = nk
+     * @param head
+     * @return
+     */
     public ListNode reverseList(ListNode head){
         // 基准情况
         if (head == null || head.next == null) return head;

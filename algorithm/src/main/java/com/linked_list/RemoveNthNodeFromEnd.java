@@ -2,6 +2,9 @@ package com.linked_list;
 
 import java.util.Stack;
 
+/**
+ * TODO 全部实操最有效
+ */
 public class RemoveNthNodeFromEnd {
     // 方法一：计算链表长度
     public ListNode removeNthFromEnd1(ListNode head, int n){

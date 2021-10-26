@@ -2,7 +2,16 @@ package com.sliding_windows;
 
 import java.util.HashMap;
 
+/**
+ * TODO 给你一个字符串 s 、一个字符串 t 。返回 s 中涵盖 t 所有字符的最小子串。如果 s 中不存在涵盖 t 所有字符的子串，则返回空字符串 "" 。
+ * 输入：s = "ADOBECODEBANC", t = "ABC"
+ * 输出："BANC"
+ * 示例 2：
+ * 输入：s = "a", t = "a"
+ * 输出："a"
+ */
 public class MinWindowSubstring {
+
     // 方法一：暴力法，枚举s中所有子串
     public String minWindow1(String s, String t) {
         // 定义最小子串，保存结果，初始为空字符串
@@ -218,6 +227,6 @@ public class MinWindowSubstring {
         String t = "ABC";
 
         MinWindowSubstring minWindowSubstring = new MinWindowSubstring();
-        System.out.println(minWindowSubstring.minWindow(s, t));
+        System.out.println(minWindowSubstring.minWindow1(s, t));
     }
 }
