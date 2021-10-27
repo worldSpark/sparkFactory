@@ -1,8 +1,7 @@
 package com.arrays;
 
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * 用于集合的随机两个数之和等于多少
@@ -63,11 +62,13 @@ public class TwoSum {
     }
 
     public static void main(String[] args) {
-        int[] input = {2,7,11,15};
+        int[] input = {2,7,11,15,1,8,3,6};
         int[] input2 = {3, 1, 3};
         int target = 9;
         int target2 = 6;
-
+        TwoSum twoSum = new TwoSum();
+        ArrayList<int[]> num = twoSum.getNum(input, target);
+        System.out.println(num);
         // 定义一个大数组，进行性能测试
         int[] input3 = new int[1000000];
         for (int i = 0; i < input3.length; i++)
@@ -78,7 +79,6 @@ public class TwoSum {
         // 为了计算程序运行时间，开始计算和计算完成分别计时
         long startTime = System.currentTimeMillis();
 
-        TwoSum twoSum = new TwoSum();
         int[] output = twoSum.twoSum(input3, target3); //时间:91ms
 //        int[] output = twoSum.towSum2(input3, target3);//105ms
 
@@ -89,6 +89,26 @@ public class TwoSum {
         for (int index: output){
             System.out.print(index + "\t");
         }
+    }
+
+    public ArrayList<int[]> getNum(int[] input3,int target){
+        HashMap<Integer, Integer> hashMap = new HashMap<>();
+        ArrayList<int[]> objects = new ArrayList<>();
+        //获取循环
+        for (int i = 0; i < input3.length; i++) {
+            hashMap.put(input3[i],i);
+        }
+        for (int i = 0; i < input3.length; i++) {
+            int thisNum = target - input3[i];
+            if(hashMap.containsKey(thisNum) && hashMap.get(thisNum) != i){
+                int[] ints = {input3[i], thisNum};
+                objects.add(ints);
+            }
+        }
+        if(objects.size()>0){
+            return objects;
+        }
+        throw new IllegalArgumentException("未找到");
     }
 
 }
