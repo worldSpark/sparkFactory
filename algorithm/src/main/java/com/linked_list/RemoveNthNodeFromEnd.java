@@ -88,6 +88,7 @@ public class RemoveNthNodeFromEnd {
     }
 
     public static void main(String[] args) {
+//        getStack();
         ListNode listNode1 = new ListNode(1);
         ListNode listNode2 = new ListNode(2);
         ListNode listNode3 = new ListNode(3);
@@ -105,6 +106,20 @@ public class RemoveNthNodeFromEnd {
 
         RemoveNthNodeFromEnd removeNthNodeFromEnd = new RemoveNthNodeFromEnd();
 
-        TestLinkedList.printList(removeNthNodeFromEnd.removeNthFromEnd(listNode1, 2));
+        TestLinkedList.printList(removeNthNodeFromEnd.removeNthFromEnd2(listNode1, 2));
+    }
+
+    /**
+     * TODO 栈的使用
+     */
+    public static void getStack(){
+        //获取栈,插入和弹出,删除
+        Stack<Object> objects = new Stack<>();
+        objects.push("123456");
+        objects.add(7890);
+        objects.add(9876);
+        objects.push("654321");
+        objects.pop();
+        System.out.println(objects);
     }
 }

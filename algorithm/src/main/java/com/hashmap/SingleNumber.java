@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 
+/**
+ * 筛选只出现一次数字
+ */
 public class SingleNumber {
     // 方法一：暴力法
     public int singleNumber1(int[] nums){
