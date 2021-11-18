@@ -106,7 +106,7 @@ public class RemoveNthNodeFromEnd {
 
         RemoveNthNodeFromEnd removeNthNodeFromEnd = new RemoveNthNodeFromEnd();
 
-        TestLinkedList.printList(removeNthNodeFromEnd.removeNthFromEnd2(listNode1, 2));
+        TestLinkedList.printList(removeNthNodeFromEnd.removeNthFromEnd(listNode1, 2));
     }
 
     /**

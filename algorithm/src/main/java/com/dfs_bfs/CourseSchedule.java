@@ -115,7 +115,7 @@ public class CourseSchedule {
 
         CourseSchedule courseSchedule = new CourseSchedule();
 
-        System.out.println(courseSchedule.canFinish(2, prerequisites));
+        System.out.println(courseSchedule.canFinish1(2, prerequisites2));
         System.out.println(courseSchedule.canFinish(2, prerequisites2));
     }
 }

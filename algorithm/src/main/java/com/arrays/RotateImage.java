@@ -2,7 +2,7 @@ package com.arrays;
 
 /**
  * @program: structure-algorithm
- * @description:
+ * @description: 旋转图像
  * @author: Mr.Wan
  * @create: 2021-10-08 11:20
  * TODO 给定一个 n n的二维矩阵表示一个图像。

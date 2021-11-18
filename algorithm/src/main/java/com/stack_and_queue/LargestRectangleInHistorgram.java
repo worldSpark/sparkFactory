@@ -206,9 +206,15 @@ public class LargestRectangleInHistorgram {
 
     public static void main(String[] args) {
         int[] heights = {2,1,5,6,2,3};
-
+        Stack<Integer> stack = new Stack<>();
+        for (int height : heights) {
+            stack.push(height);
+        }
+        System.out.println(stack.peek());
+        System.out.println(stack.pop());
         LargestRectangleInHistorgram largestRectangleInHistorgram = new LargestRectangleInHistorgram();
 
         System.out.println(largestRectangleInHistorgram.largestRectangleArea(heights));
     }
+
 }

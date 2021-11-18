@@ -6,6 +6,9 @@
     <modules>
         <module>algorithm</module>
         <module>spring</module>
+        <module>desgin</module>
+        <module>jvm</module>
+        <module>juc</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

@@ -93,5 +93,6 @@ public class TreeSerialization {
         System.out.println(treeSerialization.serialize(node1));
 
         TreeNode newTree = treeSerialization.deserialize(treeSerialization.serialize(node1));
+        System.out.println(newTree);
     }
 }
