@@ -9,6 +9,7 @@
         <module>desgin</module>
         <module>jvm</module>
         <module>juc</module>
+        <module>demo</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
